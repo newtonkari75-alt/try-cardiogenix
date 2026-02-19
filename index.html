@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 1. Optimization & SEO -->
+    <!-- 1. Otimização & SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,24 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- 2. Preload Critical Assets -->
-    <link rel="preload" href="https://i.imgur.com/7hKBvwf.png" as="image" />
+    <!-- 2. Preload de Ativos Críticos -->
+    <link rel="preload" href="images/cardiogenix.png" as="image" />
+    <link rel="preload" href="images/cardiogenix-logo.png" as="image" />
+    <link rel="preload" href="images/cardiogenix-fundo.jpg" as="image" />
 
-    <!-- 3. Metadata -->
-    <title data-translate="meta_title">Cardiogenix™ | Premium Vitality & Heart Performance Formula</title>
-    <meta name="description" content="Discover Cardiogenix™, Europe's #1 formula for energy, heart health, and vitality. Rich in key nutrients for sustained daily performance.">
-    <meta name="keywords" content="Cardiogenix, heart health, male vitality, energy supplement, circulation support, premium formula">
+    <!-- 3. Metadados -->
+    <title data-translate="meta_title">Cardiogenix™ | Control Your Blood Sugar & Energy</title>
+    <meta name="description" content="Cardiogenix™ supports healthy glucose levels and metabolic balance, helping men feel stronger and more focused every day.">
+    <meta name="keywords" content="Cardiogenix, blood sugar support, male vitality, energy supplement, glucose balance, premium formula">
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#F8FAFC" />
+    <meta name="theme-color" content="#EB704D" />
 
-    <!-- 4. International SEO -->
+    <!-- 4. SEO Internacional -->
     <link rel="canonical" href="https://cardiogenix-eu.vercel.app/" />
     <link rel="alternate" hreflang="en" href="https://cardiogenix-eu.vercel.app/?lang=en" />
     <link rel="alternate" hreflang="de" href="https://cardiogenix-eu.vercel.app/?lang=de" />
     <link rel="alternate" hreflang="sv" href="https://cardiogenix-eu.vercel.app/?lang=sv" />
     <link rel="alternate" hreflang="x-default" href="https://cardiogenix-eu.vercel.app/" />
 
-    <!-- 5. Structured Data -->
+    <!-- 5. Dados Estruturados -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,13 +38,14 @@
           "@type": "Organization",
           "name": "Cardiogenix Europe",
           "url": "https://cardiogenix-eu.vercel.app/",
+          "logo": "https://cardiogenix-eu.vercel.app/images/cardiogenix-logo.png",
           "contactPoint": { "@type": "ContactPoint", "email": "support@cardiogenix.com", "contactType": "customer support" }
         },
         {
           "@type": "Product",
-          "name": "Cardiogenix™ Premium Formula",
-          "image": "https://i.imgur.com/7hKBvwf.png",
-          "description": "Premium cardiovascular and vitality support formula for men.",
+          "name": "Cardiogenix™ Blood Sugar Formula",
+          "image": "https://cardiogenix-eu.vercel.app/images/cardiogenix.png",
+          "description": "Advanced blood sugar and metabolic support formula for men.",
           "brand": { "@type": "Brand", "name": "Cardiogenix" },
           "offers": {
             "@type": "AggregateOffer",
@@ -59,38 +62,55 @@
     }
     </script>
 
-    <!-- Tailwind & Fonts -->
+    <!-- Tailwind Config Customizada -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#EB704D',
+                            dark: '#1A1A1A',
+                            navy: '#0B1E3D'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="https://i.imgur.com/7hKBvwf.png" type="image/png">
+    <link rel="icon" href="images/cardiogenix.png" type="image/png">
 
     <style>
         body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
         .hero-section-bg { background-color: #F8FAFC; position: relative; overflow: hidden; }
         .hero-bg-overlay {
             position: absolute; inset: 0;
-            background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop');
+            background-image: url('images/cardiogenix-fundo.jpg');
             background-size: cover; background-position: center;
-            opacity: 0.05; mix-blend-mode: multiply;
+            /* Opacidade aumentada para aparecer mais conforme solicitado */
+            opacity: 0.25; 
+            mix-blend-mode: multiply;
         }
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.9);
         }
         .btn-country {
             background: white; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(30, 64, 175, 0.1);
+            border: 1px solid rgba(235, 112, 77, 0.1);
         }
         .btn-country:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px -10px rgba(30, 64, 175, 0.2);
-            border-color: #1E40AF;
+            box-shadow: 0 15px 30px -10px rgba(235, 112, 77, 0.2);
+            border-color: #EB704D;
         }
     </style>
 </head>
@@ -100,15 +120,15 @@
     <header class="sticky top-0 bg-white/95 backdrop-blur-md z-40 shadow-sm border-b border-gray-100">
         <div class="container mx-auto flex justify-between items-center p-4">
             <div class="flex items-center gap-2">
-                <span class="font-black text-xl italic tracking-tighter text-blue-900">CARDIOGENIX</span>
+                <img src="images/cardiogenix-logo.png" alt="Cardiogenix Logo" class="h-8 md:h-10 w-auto">
             </div>
-            <a href="#order" class="bg-blue-700 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-blue-800 transition-all shadow-md active:scale-95" data-translate="nav_order">Order Now</a>
+            <a href="#order" class="bg-brand-orange text-white px-6 py-2 rounded-full text-sm font-bold hover:brightness-110 transition-all shadow-md active:scale-95" data-translate="nav_order">Order Now</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="order" class="hero-section-bg text-slate-900 py-16 md:py-24 min-h-[85vh] flex items-center">
+        <section id="order" class="hero-section-bg text-slate-900 py-16 md:py-28 min-h-[85vh] flex items-center">
             <div class="hero-bg-overlay"></div>
             
             <div class="container relative z-10 mx-auto px-4 sm:px-6">
@@ -120,48 +140,49 @@
                         <!-- Badge -->
                         <div class="glass-panel rounded-full px-4 py-1.5 mb-6 inline-flex items-center gap-3 shadow-sm">
                             <div class="flex items-center gap-1">
-                                <i class="text-yellow-500 w-4 h-4 fill-current" data-feather="star"></i>
-                                <span class="font-bold text-xs text-blue-900">4.9/5</span>
+                                <i class="text-brand-orange w-4 h-4 fill-current" data-feather="star"></i>
+                                <span class="font-bold text-xs text-brand-navy">4.9/5</span>
                             </div>
                             <div class="w-px h-3 bg-gray-300"></div>
-                            <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700" data-translate="discount_badge">SPECIAL OFFER: 50% OFF TODAY</span>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-brand-orange" data-translate="discount_badge">SPECIAL OFFER: 50% OFF TODAY</span>
                         </div>
 
-                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight text-blue-950 text-center lg:text-left" data-translate="hero_title">
-                            Optimize Your Vitality & Cardiovascular Performance
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight text-brand-navy text-center lg:text-left" data-translate="hero_title">
+                            Control Your Blood Sugar & Take Back Your Energy
                         </h1>
                         
-                        <p class="text-base md:text-lg mb-10 text-slate-600 leading-relaxed font-medium text-center lg:text-left" data-translate="hero_desc">
-                            Cardiogenix™ is the leading choice for men seeking to support circulation, heart health, and sustained energy levels using premium, safe ingredients.
+                        <p class="text-base md:text-lg mb-10 text-slate-700 leading-relaxed font-semibold text-center lg:text-left" data-translate="hero_desc">
+                            Cardiogenix™ supports healthy glucose levels and metabolic balance, helping men feel stronger and more focused every day.
                         </p>
 
                         <div class="w-full max-w-lg reveal">
-                            <p class="text-[11px] font-bold uppercase tracking-widest text-blue-600 mb-5 text-center lg:text-left" data-translate="select_cta"><i data-feather="map-pin" class="inline-block w-3.5 h-3.5 mb-0.5 mr-1"></i> SELECT YOUR COUNTRY:</p>
+                            <p class="text-[11px] font-bold uppercase tracking-widest text-brand-orange mb-5 text-center lg:text-left" data-translate="select_cta"><i data-feather="map-pin" class="inline-block w-3.5 h-3.5 mb-0.5 mr-1"></i> SELECT YOUR COUNTRY:</p>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4" role="navigation">
                                 <!-- Germany -->
-                                <a href="https://tl-track.com/tracker/vX24/?sub_id={gclid}" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm">
+                                <a href="https://tl-track.com/tracker/vX24/?sub_id={gclid}" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm group">
                                     <img src="https://flagcdn.com/w40/de.png" class="w-6 h-auto rounded-sm" alt="DE">
-                                    <span class="font-bold text-sm text-blue-900">Germany</span>
+                                    <span class="font-bold text-sm text-brand-navy group-hover:text-brand-orange">Germany</span>
                                 </a>
-                                <!-- United Kingdom -->
-                                <a href="https://tl-track.com/tracker/vX22/?sub_id={gclid}" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm">
+                                <!-- UK -->
+                                <a href="https://tl-track.com/tracker/vX22/?sub_id={gclid}" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm group">
                                     <img src="https://flagcdn.com/w40/gb.png" class="w-6 h-auto rounded-sm" alt="UK">
-                                    <span class="font-bold text-sm text-blue-900">UK</span>
+                                    <span class="font-bold text-sm text-brand-navy group-hover:text-brand-orange">UK</span>
                                 </a>
                                 <!-- Sweden -->
-                                <a href="https://tl-track.com/tracker/vX2w/?sub_id={gclid}" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm">
+                                <a href="https://tl-track.com/tracker/vX2w/?sub_id={gclid}" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm group">
                                     <img src="https://flagcdn.com/w40/se.png" class="w-6 h-auto rounded-sm" alt="SE">
-                                    <span class="font-bold text-sm text-blue-900">Sweden</span>
+                                    <span class="font-bold text-sm text-brand-navy group-hover:text-brand-orange">Sweden</span>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- RIGHT SIDE: IMAGE -->
+                    <!-- RIGHT SIDE: PRODUCT IMAGE -->
                     <div class="flex flex-col justify-center items-center h-full reveal order-1 lg:order-2">
-                        <div class="relative w-full max-w-[280px] md:max-w-[400px]">
-                            <div class="absolute -inset-10 bg-blue-100/50 blur-[100px] rounded-full"></div>
-                            <img src="https://i.imgur.com/7hKBvwf.png" alt="Cardiogenix Premium" class="relative z-10 w-full h-auto object-contain transform transition hover:scale-105 duration-1000 drop-shadow-[0_25px_25px_rgba(0,0,0,0.1)]">
+                        <div class="relative w-full max-w-[280px] md:max-w-[420px]">
+                            <!-- Glow do destaque alterado para a cor da marca -->
+                            <div class="absolute -inset-10 bg-brand-orange/10 blur-[100px] rounded-full"></div>
+                            <img src="images/cardiogenix.png" alt="Cardiogenix Bottle" class="relative z-10 w-full h-auto object-contain transform transition hover:scale-105 duration-1000 drop-shadow-[0_25px_25px_rgba(0,0,0,0.15)]">
                         </div>
                     </div>
 
@@ -173,38 +194,38 @@
         <section id="faq" class="py-20 bg-slate-50">
             <div class="container mx-auto px-4 max-w-4xl reveal">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-black text-blue-950 mb-4" data-translate="faq_title">Frequently Asked Questions</h2>
+                    <h2 class="text-3xl md:text-4xl font-black text-brand-navy mb-4" data-translate="faq_title">Frequently Asked Questions</h2>
                     <p class="text-slate-500 max-w-2xl mx-auto text-lg" data-translate="faq_subtitle">Everything you need to know about Cardiogenix™</p>
                 </div>
                 
                 <div class="space-y-4">
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                         <button class="faq-button w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-bold text-blue-950 pr-4" data-translate="faq_q1">What makes Cardiogenix different?</span>
-                            <i data-feather="chevron-down" class="text-blue-600 transition-transform duration-300"></i>
+                            <span class="font-bold text-brand-navy pr-4" data-translate="faq_q1">How does Cardiogenix support blood sugar?</span>
+                            <i data-feather="chevron-down" class="text-brand-orange transition-transform duration-300"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed" data-translate="faq_a1">
-                            Cardiogenix is engineered specifically for men's cardiovascular health and daily energy. Unlike generic supplements, our formula uses high-purity ingredients optimized for rapid absorption and long-term results.
+                            Cardiogenix™ uses a synergistic blend of natural ingredients designed to support the body's glucose metabolism and insulin sensitivity, helping to prevent sharp spikes after meals.
                         </div>
                     </div>
 
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                         <button class="faq-button w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-bold text-blue-950 pr-4" data-translate="faq_q2">Is the product safe for daily use?</span>
-                            <i data-feather="chevron-down" class="text-blue-600 transition-transform duration-300"></i>
+                            <span class="font-bold text-brand-navy pr-4" data-translate="faq_q2">Is it safe to take every day?</span>
+                            <i data-feather="chevron-down" class="text-brand-orange transition-transform duration-300"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed" data-translate="faq_a2">
-                            Yes. Cardiogenix is produced in certified EU facilities under strict quality controls. It is designed to be taken daily as part of a healthy lifestyle. Always consult a professional if you have pre-existing conditions.
+                            Absolutely. Our formula is manufactured in certified EU facilities following strict quality standards. It's intended as a daily supplement to provide continuous metabolic support.
                         </div>
                     </div>
 
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
                         <button class="faq-button w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-bold text-blue-950 pr-4" data-translate="faq_q3">How fast is shipping?</span>
-                            <i data-feather="chevron-down" class="text-blue-600 transition-transform duration-300"></i>
+                            <span class="font-bold text-brand-navy pr-4" data-translate="faq_q3">When will I see results?</span>
+                            <i data-feather="chevron-down" class="text-brand-orange transition-transform duration-300"></i>
                         </button>
                         <div class="faq-content hidden px-6 pb-5 text-slate-600 text-sm leading-relaxed" data-translate="faq_a3">
-                            We ship from regional hubs in Germany and the UK. Standard delivery typically takes 2-4 business days for DE, UK, and SE.
+                            Many users report steadier energy levels within the first week. For optimal blood sugar and metabolic balance, we recommend consistent use for at least 30 to 60 days.
                         </div>
                     </div>
                 </div>
@@ -213,21 +234,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-white/5">
+    <footer class="bg-brand-navy text-slate-400 py-16 border-t border-white/5">
         <div class="container mx-auto px-4 text-center text-sm">
             <div class="flex flex-col items-center justify-center mb-10 gap-4">
-                <span class="font-black italic text-2xl text-white">CARDIOGENIX</span>
+                <img src="images/cardiogenix-logo.png" alt="Cardiogenix Logo" class="h-8 brightness-0 invert opacity-90">
                 <p class="text-[10px] text-slate-500 max-w-md mt-4 uppercase tracking-widest font-bold">Authorized Distributor Europe</p>
             </div>
             
             <div class="flex justify-center flex-wrap gap-6 md:gap-12 mb-8 text-[10px] font-extrabold uppercase tracking-widest">
-                <button onclick="openModal('privacy')" class="hover:text-white transition-colors" data-translate="link_privacy">Privacy Policy</button>
-                <button onclick="openModal('terms')" class="hover:text-white transition-colors" data-translate="link_terms">Terms of Service</button>
-                <button onclick="openModal('refund')" class="hover:text-white transition-colors" data-translate="link_refund">Refund Policy</button>
+                <button onclick="openModal('privacy')" class="hover:text-brand-orange transition-colors" data-translate="link_privacy">Privacy Policy</button>
+                <button onclick="openModal('terms')" class="hover:text-brand-orange transition-colors" data-translate="link_terms">Terms of Service</button>
+                <button onclick="openModal('refund')" class="hover:text-brand-orange transition-colors" data-translate="link_refund">Refund Policy</button>
             </div>
 
             <div class="border-t border-white/5 pt-8 text-[10px] text-slate-600 max-w-4xl mx-auto space-y-4 leading-relaxed">
-                <p>Cardiogenix™ is a dietary supplement. It is not intended to diagnose, treat, or prevent any disease. Results may vary from person to person.</p>
+                <p>Cardiogenix™ is a dietary supplement. It is not intended to diagnose, treat, or prevent any disease. Consult your doctor if you have diabetes or are on medication. Results may vary.</p>
                 <p>© 2026 Cardiogenix Global. All Rights Reserved.</p>
             </div>
         </div>
@@ -235,12 +256,12 @@
 
     <!-- MODAL -->
     <div id="policy-modal" class="fixed inset-0 z-50 hidden">
-        <div class="fixed inset-0 bg-slate-950/90 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="fixed inset-0 bg-brand-navy/95 backdrop-blur-sm" onclick="closeModal()"></div>
         <div class="fixed inset-0 z-10 overflow-y-auto">
             <div class="flex min-h-full items-center justify-center p-4">
                 <div class="relative transform overflow-hidden rounded-3xl bg-white shadow-2xl transition-all sm:w-full sm:max-w-3xl flex flex-col">
                     <div class="bg-white px-8 py-5 border-b border-gray-100 flex justify-between items-center">
-                        <h3 class="text-xl font-bold text-blue-950" id="modal-title">Information</h3>
+                        <h3 class="text-xl font-bold text-brand-navy" id="modal-title">Information</h3>
                         <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600"><i data-feather="x"></i></button>
                     </div>
                     <div class="p-10 overflow-y-auto text-sm text-slate-600 leading-relaxed max-h-[60vh]" id="modal-content"></div>
@@ -253,62 +274,62 @@
     <script>
         const translations = {
             'en': {
-                'meta_title': 'Cardiogenix™ | Vitality & Heart Performance',
+                'meta_title': 'Cardiogenix™ | Control Your Blood Sugar & Energy',
                 'nav_order': 'Order Now',
                 'discount_badge': 'SPECIAL OFFER: 50% OFF TODAY',
-                'hero_title': 'Optimize Your Vitality & Cardiovascular Performance',
-                'hero_desc': 'Cardiogenix™ is the leading choice for men seeking to support circulation, heart health, and sustained energy levels.',
+                'hero_title': 'Control Your Blood Sugar & Take Back Your Energy',
+                'hero_desc': 'Cardiogenix™ supports healthy glucose levels and metabolic balance, helping men feel stronger and more focused every day.',
                 'select_cta': 'SELECT YOUR COUNTRY:',
                 'faq_title': 'Frequently Asked Questions',
                 'faq_subtitle': 'Everything you need to know about Cardiogenix™',
-                'faq_q1': 'What makes Cardiogenix different?',
-                'faq_a1': 'It is engineered for men\'s heart health using high-purity European ingredients.',
-                'faq_q2': 'Is the product safe for daily use?',
-                'faq_a2': 'Yes, produced in certified EU facilities under strict controls.',
-                'faq_q3': 'How fast is shipping?',
-                'faq_a3': 'Typically 2-4 business days within DE, UK, and SE.',
+                'faq_q1': 'How does Cardiogenix support blood sugar?',
+                'faq_a1': 'It uses a natural blend designed to support glucose metabolism and insulin sensitivity.',
+                'faq_q2': 'Is it safe to take every day?',
+                'faq_a2': 'Yes, produced in certified EU facilities under strict quality controls.',
+                'faq_q3': 'When will I see results?',
+                'faq_a3': 'Many users report steadier energy within a week, but 30-60 days is recommended for full balance.',
                 'link_privacy': 'Privacy Policy', 'link_terms': 'Terms of Service', 'link_refund': 'Refund Policy'
             },
             'de': {
-                'meta_title': 'Cardiogenix™ | Vitalität & Herzleistung',
+                'meta_title': 'Cardiogenix™ | Blutzucker Kontrollieren & Energie',
                 'nav_order': 'Jetzt Bestellen',
                 'discount_badge': 'SONDERANGEBOT: HEUTE 50% RABATT',
-                'hero_title': 'Optimieren Sie Ihre Vitalität & Herzleistung',
-                'hero_desc': 'Cardiogenix™ ist die erste Wahl für Männer, die Durchblutung, Herzgesundheit und Energie unterstützen wollen.',
+                'hero_title': 'Kontrollieren Sie Ihren Blutzucker & Gewinnen Sie Energie Zurück',
+                'hero_desc': 'Cardiogenix™ unterstützt gesunde Glukosewerte und das metabolische Gleichgewicht, damit Männer sich jeden Tag stärker und fokussierter fühlen.',
                 'select_cta': 'WÄHLEN SIE IHR LAND:',
                 'faq_title': 'Häufig gestellte Fragen',
                 'faq_subtitle': 'Alles, was Sie über Cardiogenix™ wissen müssen',
-                'faq_q1': 'Was macht Cardiogenix anders?',
-                'faq_a1': 'Es wurde speziell für die männliche Herzgesundheit mit hochreinen Inhaltsstoffen entwickelt.',
-                'faq_q2': 'Ist das Produkt sicher für den täglichen Gebrauch?',
-                'faq_a2': 'Ja, hergestellt in zertifizierten EU-Anlagen unter strengen Kontrollen.',
-                'faq_q3': 'Wie schnell ist der Versand?',
-                'faq_a3': 'In der Regel 2-4 Werktage innerhalb von Deutschland.',
+                'faq_q1': 'Wie unterstützt Cardiogenix den Blutzucker?',
+                'faq_a1': 'Es verwendet eine natürliche Mischung, die den Glukosestoffwechsel und die Insulinsensitivität unterstützt.',
+                'faq_q2': 'Ist es sicher für den täglichen Gebrauch?',
+                'faq_a2': 'Ja, hergestellt in zertifizierten EU-Anlagen unter strengen Qualitätskontrollen.',
+                'faq_q3': 'Wann werde ich Ergebnisse sehen?',
+                'faq_a3': 'Viele Anwender berichten von stabilerer Energie innerhalb einer Woche; 30-60 Tage werden für die volle Balance empfohlen.',
                 'link_privacy': 'Datenschutz', 'link_terms': 'AGB', 'link_refund': 'Widerrufsrecht'
             },
             'sv': {
-                'meta_title': 'Cardiogenix™ | Vitalitet & Hjärtprestation',
+                'meta_title': 'Cardiogenix™ | Stöd Hälsosamt Blodsocker & Energi',
                 'nav_order': 'Beställ Nu',
                 'discount_badge': 'SPECIALERBJUDANDE: 50% RABATT IDAG',
-                'hero_title': 'Optimera Din Vitalitet & Hjärtprestation',
-                'hero_desc': 'Cardiogenix™ är det främsta valet för män som vill stödja cirkulation, hjärthälsa och energi.',
+                'hero_title': 'Stöd Hälsosamt Blodsocker & Power Your Metabolism',
+                'hero_desc': 'Cardiogenix™ är en daglig formula designad för att stabilisera glukosnivåer och främja uthållig energi för män.',
                 'select_cta': 'VÄLJ DITT LAND:',
                 'faq_title': 'Vanliga frågor',
                 'faq_subtitle': 'Allt du behöver veta om Cardiogenix™',
-                'faq_q1': 'Vad gör Cardiogenix annorlunda?',
-                'faq_a1': 'Den är framtagen för mäns hälsa med europeiska ingredienser av högsta kvalitet.',
-                'faq_q2': 'Är produkten säker att använda dagligen?',
-                'faq_a2': 'Ja, producerad i certifierade EU-anläggningar under strikt kontroll.',
-                'faq_q3': 'Hur snabb är frakten?',
-                'faq_a3': 'Vanligtvis 2-4 arbetsdagar inom Sverige.',
+                'faq_q1': 'Hur stödjer Cardiogenix blodsockret?',
+                'faq_a1': 'Den använder en naturlig blandning utformad för att stödja glukosmetabolism och insulinkänslighet.',
+                'faq_q2': 'Är den säker att använda varje dag?',
+                'faq_a2': 'Ja, producerad i certifierade EU-anläggningar under strikta kvalitetsstandarder.',
+                'faq_q3': 'När ser jag resultat?',
+                'faq_a3': 'Många användare rapporterar stabilare energi inom en vecka; 30-60 dagar rekommenderas för full balans.',
                 'link_privacy': 'Integritetspolicy', 'link_terms': 'Användarvillkor', 'link_refund': 'Återbetalningspolicy'
             }
         };
 
         const legalTexts = {
-            terms: `<h2 class="text-2xl font-bold mb-4">Terms of Service</h2><p>Usage of this site constitutes agreement to our terms. Products are intended for adults 18+.</p>`,
-            privacy: `<h2 class="text-2xl font-bold mb-4">Privacy Policy</h2><p>Your data is protected by GDPR regulations. We use encrypted checkout for all DE, UK, and SE transactions.</p>`,
-            refund: `<h2 class="text-2xl font-bold mb-4">Refund Policy</h2><p>We offer a 30-day money-back guarantee if you are not satisfied with your results.</p>`
+            terms: `<h2 class="text-2xl font-bold mb-4">Terms of Service</h2><p>Usage of this site constitutes agreement to our terms. Products are intended for adults 18+ and as dietary supplements only.</p>`,
+            privacy: `<h2 class="text-2xl font-bold mb-4">Privacy Policy</h2><p>Your data is protected by GDPR regulations. We use encrypted checkout for all transactions in DE, UK, and SE.</p>`,
+            refund: `<h2 class="text-2xl font-bold mb-4">Refund Policy</h2><p>We offer a 30-day money-back guarantee. If you are not satisfied with your results, contact support for instructions.</p>`
         };
 
         function openModal(type) {
@@ -335,7 +356,6 @@
                 }
             });
 
-            // Update gclid in links
             const gclid = urlParams.get('gclid');
             if (gclid) {
                 document.querySelectorAll('a[href*="{gclid}"]').forEach(link => {
