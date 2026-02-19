@@ -10,10 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload de Ativos Críticos -->
+    <!-- Preload de Ativos Críticos (Removido o fundo) -->
     <link rel="preload" href="images/cardiogenix.png" as="image" />
     <link rel="preload" href="images/cardiogenix-logo.png" as="image" />
-    <link rel="preload" href="images/cardiogenix-fundo.jpg" as="image" />
     <link rel="preload" href="images/faviconV2 (1).png" as="image" />
 
     <!-- Metadados Otimizados para Intenção de Busca -->
@@ -23,21 +22,21 @@
     <meta name="theme-color" content="#EB704D" />
     <meta name="author" content="Cardiogenix Global">
 
-    <!-- SEO Internacional (Hreflang para ranqueamento regional) -->
+    <!-- SEO Internacional -->
     <link rel="canonical" href="https://try-cardiogenix.vercel.app/" />
     <link rel="alternate" hreflang="en-GB" href="https://try-cardiogenix.vercel.app/?lang=en" />
     <link rel="alternate" hreflang="sv-SE" href="https://try-cardiogenix.vercel.app/?lang=sv" />
     <link rel="alternate" hreflang="de-DE" href="https://try-cardiogenix.vercel.app/?lang=de" />
     <link rel="alternate" hreflang="x-default" href="https://try-cardiogenix.vercel.app/" />
 
-    <!-- Open Graph (SEO Social) -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Cardiogenix™ | Natural Blood Sugar & Energy Support">
     <meta property="og:description" content="Regulate your glucose levels and boost metabolic energy naturally with Cardiogenix™. Available in UK, Germany and Sweden.">
     <meta property="og:image" content="images/cardiogenix.png">
     <meta property="og:url" content="https://try-cardiogenix.vercel.app/">
     <meta property="og:type" content="website">
 
-    <!-- JSON-LD Estruturado Avançado (SEO de Autoridade) -->
+    <!-- JSON-LD Estruturado -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,23 +62,12 @@
             "availability": "https://schema.org/InStock",
             "eligibleRegion": ["GB", "SE", "DE"]
           }
-        },
-        {
-          "@type": "Organization",
-          "name": "Cardiogenix Europe",
-          "url": "https://try-cardiogenix.vercel.app/",
-          "logo": "https://try-cardiogenix.vercel.app/images/cardiogenix-logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "support@ivitasana.com",
-            "contactType": "customer service"
-          }
         }
       ]
     }
     </script>
 
-    <!-- Tailwind & Fonts -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -103,32 +91,26 @@
 
     <style>
         body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
-        .hero-section-bg { background-color: #F8FAFC; position: relative; overflow: hidden; }
-        .hero-bg-overlay {
-            position: absolute; inset: 0;
-            background-image: url('images/cardiogenix-fundo.jpg');
-            background-size: cover; background-position: center;
-            /* Opacidade aumentada para 45% para maior visibilidade */
-            opacity: 0.45; 
-            mix-blend-mode: multiply;
-        }
+        /* Hero Section com cor sólida e limpa para melhor alinhamento */
+        .hero-section-bg { background-color: #ffffff; position: relative; overflow: hidden; }
+        
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
+        
         .glass-panel {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.9);
+            background: #ffffff;
+            border: 1px solid rgba(11, 30, 61, 0.1);
         }
-        /* Botões dos países com borda e destaque */
+        
         .btn-country {
             background: white; 
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid rgba(235, 112, 77, 0.4); /* Borda mais visível por padrão */
+            border: 2px solid rgba(235, 112, 77, 0.4);
         }
         .btn-country:hover {
             transform: translateY(-4px);
             box-shadow: 0 15px 30px -8px rgba(235, 112, 77, 0.3);
-            border-color: #EB704D; /* Borda fica sólida no hover */
+            border-color: #EB704D;
             background-color: #FFF9F7;
         }
         .faq-content {
@@ -159,10 +141,8 @@
     </header>
 
     <main>
-        <!-- Seção Hero -->
-        <section id="order" class="hero-section-bg text-slate-900 py-12 md:py-32 min-h-[90vh] flex items-center" aria-labelledby="hero-title">
-            <div class="hero-bg-overlay" aria-hidden="true"></div>
-            
+        <!-- Seção Hero (Sem imagem de fundo para alinhamento perfeito) -->
+        <section id="order" class="hero-section-bg text-slate-900 py-12 md:py-32 min-h-[85vh] flex items-center" aria-labelledby="hero-title">
             <div class="container relative z-10 mx-auto px-4 sm:px-6">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-10 items-center">
                     
@@ -179,22 +159,22 @@
                             <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-brand-orange whitespace-nowrap" data-translate="discount_badge">SPECIAL OFFER: LIMITED TIME ONLY</span>
                         </div>
 
-                        <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-7xl font-black mb-6 leading-tight tracking-tight text-brand-navy text-center lg:text-left drop-shadow-sm" data-translate="hero_title">
+                        <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-7xl font-black mb-6 leading-tight tracking-tight text-brand-navy text-center lg:text-left" data-translate="hero_title">
                             Control Your Blood Sugar & Take Back Your Energy
                         </h1>
 
                         <!-- IMAGEM MOBILE -->
                         <div class="lg:hidden w-full flex justify-center mb-10 relative">
-                            <div class="absolute -inset-8 bg-brand-orange/10 blur-[70px] rounded-full" aria-hidden="true"></div>
-                            <img src="images/cardiogenix.png" alt="Cardiogenix Supplement - Mobile" class="relative z-10 w-full max-w-[280px] h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.15)]">
+                            <div class="absolute -inset-8 bg-brand-orange/5 blur-[70px] rounded-full" aria-hidden="true"></div>
+                            <img src="images/cardiogenix.png" alt="Cardiogenix Supplement - Mobile" class="relative z-10 w-full max-w-[280px] h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.12)]">
                         </div>
                         
-                        <p class="text-base md:text-xl mb-10 text-slate-800 leading-relaxed font-semibold text-center lg:text-left lg:max-w-xl" data-translate="hero_desc">
+                        <p class="text-base md:text-xl mb-10 text-slate-700 leading-relaxed font-semibold text-center lg:text-left lg:max-w-xl" data-translate="hero_desc">
                             Cardiogenix™ supports healthy glucose levels and metabolic balance, helping men feel stronger and more focused every day.
                         </p>
 
-                        <!-- SELEÇÃO DE PAÍSES COM DESTAQUE -->
-                        <div class="w-full max-w-2xl bg-white/40 p-6 md:p-8 rounded-3xl backdrop-blur-sm border border-white/60 shadow-xl lg:shadow-none lg:bg-transparent lg:p-0">
+                        <!-- SELEÇÃO DE PAÍSES -->
+                        <div class="w-full max-w-2xl bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-100 lg:bg-transparent lg:border-none lg:p-0">
                             <p class="text-[12px] font-black uppercase tracking-[0.15em] text-brand-orange mb-6 text-center lg:text-left" data-translate="select_cta"><i data-feather="map-pin" class="inline-block w-4 h-4 mb-0.5 mr-1" aria-hidden="true"></i> SELECT YOUR COUNTRY TO ORDER:</p>
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" role="navigation" aria-label="Country selection">
@@ -220,8 +200,8 @@
                     <!-- IMAGEM DESKTOP -->
                     <div class="hidden lg:flex flex-col justify-center items-center h-full order-2">
                         <div class="relative w-full max-w-[480px]">
-                            <div class="absolute -inset-16 bg-brand-orange/15 blur-[120px] rounded-full" aria-hidden="true"></div>
-                            <img src="images/cardiogenix.png" alt="Cardiogenix Supplement Bottle" class="relative z-10 w-full h-auto object-contain transform transition hover:scale-105 duration-1000 drop-shadow-[0_30px_40px_rgba(0,0,0,0.18)]">
+                            <div class="absolute -inset-16 bg-brand-orange/10 blur-[120px] rounded-full" aria-hidden="true"></div>
+                            <img src="images/cardiogenix.png" alt="Cardiogenix Supplement Bottle" class="relative z-10 w-full h-auto object-contain transform transition hover:scale-105 duration-1000 drop-shadow-[0_30px_40px_rgba(0,0,0,0.15)]">
                         </div>
                     </div>
 
@@ -230,10 +210,10 @@
         </section>
 
         <!-- Seção FAQ -->
-        <section id="faq" class="py-20 bg-slate-50 border-t border-gray-100">
+        <section id="faq" class="py-16 bg-slate-50 border-t border-gray-100">
             <div class="container mx-auto px-4 max-w-4xl reveal">
                 <div class="text-center mb-12">
-                    <h2 id="faq-heading" class="text-3xl font-black text-brand-navy mb-2" data-translate="faq_title">Frequently Asked Questions</h2>
+                    <h2 id="faq-heading" class="text-2xl md:text-3xl font-black text-brand-navy mb-2" data-translate="faq_title">Frequently Asked Questions</h2>
                 </div>
                 
                 <div class="space-y-3" id="faq-accordion" role="list">
@@ -405,7 +385,7 @@
                 'faq_q3': 'När ser jag resultat?',
                 'faq_a3': 'Vissa märker mer energi redan under de första veckorna. För fullständiga fördelar rekommenderas konsekvent användning i minst 30 dagar.',
                 'faq_q4': 'Är det säkert?',
-                'faq_a4': 'Ja. Produkten tillverkas enligt europeiska kvalitetsstandarder. Det är inte ett läkemedel.',
+                'faq_a4': 'Ja. Produkten tillverkas enligt europeiska kvalitetsstandarder. Det é inte ett läkemedel.',
                 'faq_q5': 'Ångerrätt?',
                 'faq_a5': 'Du har lagstadgad ångerrätt. Flaskan måste vara förseglad för att returen ska accepteras.',
                 'faq_q6': 'Hur ska jag ta det?',
@@ -415,11 +395,38 @@
         };
 
         const legalTexts = {
-            privacy: `<h2 class="text-xl font-bold mb-4">Privacy Policy</h2><p>ivitasana.com uses SSL to ensure your personal information is safe. We do not sell your information.</p>`,
-            terms: `<h2 class="text-xl font-bold mb-4">Terms and Conditions</h2><p>RICA Corporation Ltd, trading as CardioGenix. All contracts are governed by Dutch law.</p>`,
-            refund: `<h2 class="text-xl font-bold mb-4">Refund Policy</h2><p>Refunds are offered for products returned correctly. The bottle seal must remain unbroken.</p>`,
-            delivery: `<h2 class="text-xl font-bold mb-4">Delivery Policy</h2><p>Expect your order within 3-5 business days within the EU via PostNL or local carriers.</p>`,
-            impressum: `<h2 class="text-xl font-bold mb-4">Impressum</h2><p>RICA Corporation Ltd | 97 Windsor Street, Sliema, Malta | info@ivitasana.com</p>`
+            privacy: `
+                <h2 class="text-xl font-bold mb-4">Integritetspolicy / Privacy Policy</h2>
+                <p class="mb-4">CardioGenix (RICA Corporation Ltd) operates under the strictest discretion regarding your personal information. We respect your privacy and ensure that all information is treated confidentially.</p>
+                <p class="mb-4"><strong>Data Collection:</strong> We collect information necessary to process orders as fast and easily as possible. This includes name, email, delivery address, and payment info.</p>
+                <p class="mb-4"><strong>Security:</strong> Our website uses a high-grade SSL Certificate to encrypt all data transmitted between your browser and our secure servers. Your data is safe with us.</p>
+                <p class="mb-4"><strong>Third Parties:</strong> CardioGenix will not sell your personal information to third parties and will only make it available to those involved in processing your order (e.g., shipping carriers).</p>
+            `,
+            terms: `
+                <h2 class="text-xl font-bold mb-4">Terms and Conditions</h2>
+                <p class="mb-4"><strong>Article 1 – Identity:</strong> Website owner: RICA Corporation Ltd, trading as CardioGenix. 97 Windsor Street, Sliema SLM 1853, Malta. Phone: +31850805741. CoC: C91705.</p>
+                <p class="mb-4"><strong>Article 8 – Withdrawal:</strong> Consumers have at least 14 days from receipt to waive the distance contract. The product must be returned unopened and sealed.</p>
+                <p class="mb-4"><strong>Disclaimers:</strong> This product is a dietary supplement and not a substitute for a varied diet. Not intended to diagnose or treat diseases. All contracts are governed by Dutch law.</p>
+            `,
+            refund: `
+                <h2 class="text-xl font-bold mb-4">Return and Refund Policy</h2>
+                <p class="mb-4">Customer satisfaction is our highest priority. If you wish to cancel an order, please contact our customer service immediately at info@ivitasana.com with the subject "Cancellation".</p>
+                <p class="mb-4"><strong>Returns:</strong> We offer refunds for items returned to us correctly within the legal timeframe. Important: The bottle seal must remain unbroken.</p>
+                <p class="mb-4"><strong>Damaged Items:</strong> If your product arrives damaged, please document the packaging and contact support within 48 hours.</p>
+            `,
+            delivery: `
+                <h2 class="text-xl font-bold mb-4">Delivery Policy</h2>
+                <p class="mb-4"><strong>Delivery Time:</strong> You will receive your order within 3-5 business days within the EU.</p>
+                <p class="mb-4"><strong>Carrier:</strong> We ship with PostNL. Once the package reaches your country, final delivery is handled by your local postal service.</p>
+                <p class="mb-4"><strong>Tracking:</strong> A tracking link will be emailed to you as soon as the order is dispatched.</p>
+            `,
+            impressum: `
+                <h2 class="text-xl font-bold mb-4">Impressum</h2>
+                <p class="mb-4"><strong>Operator:</strong> RICA Corporation Ltd, trading as CardioGenix</p>
+                <p class="mb-4"><strong>Address:</strong> 97 Windsor Street, Sliema SLM 1853, Malta</p>
+                <p class="mb-4"><strong>Contact:</strong> Phone: +31850805741 | E-Mail: info@ivitasana.com</p>
+                <p class="mb-4"><strong>Registry:</strong> Chamber of Commerce Malta: C91705</p>
+            `
         };
 
         function setLanguage(lang) {
