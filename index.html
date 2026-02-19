@@ -290,37 +290,44 @@
     </main>
 
     <!-- Rodapé Google Ads Compliant (Transparência Máxima) -->
-    <footer class="bg-brand-navy text-slate-300 py-12 border-t border-white/5">
-        <div class="container mx-auto px-4 text-center text-sm">
+    <footer class="bg-brand-navy text-slate-300 py-10 md:py-12 border-t border-white/5">
+        <div class="container mx-auto px-4 text-center">
             
             <!-- Logo e Identidade Corporativa Clara -->
-            <div class="flex flex-col items-center justify-center mb-6 gap-4">
-                <img src="images/cardiogenix-logo.png" onerror="this.style.display='none'" alt="Cardiogenix Logo" class="h-8 brightness-0 invert opacity-90">
-                <p class="text-[10px] text-slate-400 max-w-md mt-2 uppercase tracking-widest font-bold">Authorized Distributor Europe & UK</p>
+            <div class="flex flex-col items-center justify-center mb-6 gap-3">
+                <img src="images/cardiogenix-logo.png" onerror="this.style.display='none'" alt="Cardiogenix Logo" class="h-7 md:h-8 brightness-0 invert opacity-90">
+                <p class="text-[9px] md:text-[10px] text-slate-400 max-w-md uppercase tracking-widest font-bold">Authorized Distributor Europe & UK</p>
             </div>
 
-            <!-- Informações de Contato Visíveis (Exigência Crítica do Google Ads) -->
-            <div class="mb-8 text-xs text-slate-400 font-medium">
-                <p><strong>RICA Corporation Ltd.</strong></p>
-                <p>97 Windsor Street, Sliema, Malta</p>
-                <p>Email: <a href="mailto:info@ivitasana.com" class="hover:text-brand-orange transition-colors">info@ivitasana.com</a></p>
+            <!-- Informações de Contato Visíveis -->
+            <div class="mb-6 text-[11px] md:text-xs text-slate-400 font-medium">
+                <p><strong>RICA Corporation Ltd.</strong> | 97 Windsor Street, Sliema, Malta</p>
+                <p class="mt-1">Email: <a href="mailto:info@ivitasana.com" class="hover:text-brand-orange transition-colors">info@ivitasana.com</a></p>
             </div>
             
-            <!-- Links Legais -->
-            <div class="flex justify-center flex-wrap gap-6 md:gap-10 mb-8 text-[10px] font-extrabold uppercase tracking-widest text-slate-400">
+            <!-- Direitos Autorais -->
+            <div class="mb-6 text-[10px] text-slate-500">
+                <p>© 2026 RICA Corporation Ltd. All Rights Reserved.</p>
+            </div>
+
+            <!-- Links Legais (Discretos no Mobile) -->
+            <div class="flex justify-center flex-wrap gap-x-3 gap-y-2 md:gap-8 mb-8 text-[9px] md:text-[10px] text-slate-500/80 md:font-bold md:uppercase tracking-wide md:tracking-widest">
                 <button onclick="openModal('privacy')" class="hover:text-brand-orange transition-colors" data-translate="link_privacy">Privacy Policy</button>
+                <span class="text-white/10 md:hidden">|</span>
                 <button onclick="openModal('terms')" class="hover:text-brand-orange transition-colors" data-translate="link_terms">Terms of Service</button>
+                <span class="text-white/10 md:hidden">|</span>
                 <button onclick="openModal('refund')" class="hover:text-brand-orange transition-colors" data-translate="link_refund">Refund Policy</button>
+                <span class="text-white/10 md:hidden">|</span>
                 <button onclick="openModal('delivery')" class="hover:text-brand-orange transition-colors" data-translate="link_delivery">Delivery Policy</button>
+                <span class="text-white/10 md:hidden">|</span>
                 <button onclick="openModal('impressum')" class="hover:text-brand-orange transition-colors">Impressum</button>
             </div>
 
-            <!-- Aviso Médico Obrigatório (Alta Visibilidade) -->
-            <div class="border-t border-white/10 pt-8 text-[11px] text-slate-400 max-w-4xl mx-auto space-y-4 leading-relaxed font-medium">
-                <p class="border border-white/10 p-4 rounded-lg bg-white/5">
+            <!-- Aviso Médico Obrigatório (Último Elemento) -->
+            <div class="border-t border-white/5 pt-6 text-[9px] md:text-[10px] text-slate-500/60 max-w-4xl mx-auto leading-relaxed text-justify md:text-center font-normal">
+                <p>
                     <strong>FDA / EFSA Disclaimer:</strong> The statements made on this website have not been evaluated by the Food and Drug Administration or the European Food Safety Authority. Cardiogenix™ is a premium dietary supplement. It is not intended to diagnose, treat, cure, or prevent any disease. Results vary by individual metabolism. Consult a licensed healthcare professional before use, especially if you are on diabetic medication, pregnant, nursing, or have a medical condition.
                 </p>
-                <p>© 2026 RICA Corporation Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
