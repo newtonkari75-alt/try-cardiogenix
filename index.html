@@ -13,11 +13,11 @@
     <!-- Preload de Ativos Críticos -->
     <link rel="preload" href="images/cardiogenix.png" as="image" />
     <link rel="preload" href="images/cardiogenix-logo.png" as="image" />
-    <link rel="preload" href="images/faviconV2 (1).png" as="image" />
 
-    <!-- Metadados Otimizados para Intenção de Busca -->
-    <title data-translate="meta_title">Cardiogenix™ | Control Your Blood Sugar & Daily Energy</title>
-    <meta name="description" content="Cardiogenix™ is the premium European formula for men's blood sugar regulation, metabolic health, and sustained natural energy. 100% Organic Support.">
+    <!-- Metadados Otimizados para Intenção de Busca e Compliance Google Ads -->
+    <!-- Substituído "Control" por "Support" para evitar suspensão por Alegações Médicas -->
+    <title data-translate="meta_title">Cardiogenix™ | Support Your Blood Sugar & Daily Energy</title>
+    <meta name="description" content="Cardiogenix™ is a premium European dietary supplement designed to support men's healthy blood sugar levels, metabolic balance, and natural energy.">
     <meta name="keywords" content="Cardiogenix, blood sugar supplement UK, blodsocker kosttillskott, glucose balance for men, metabolic energy, cardiogenix sweden, cardiogenix united kingdom, blutzucker senken">
     <meta name="theme-color" content="#EB704D" />
     <meta name="author" content="Cardiogenix Global">
@@ -31,7 +31,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Cardiogenix™ | Natural Blood Sugar & Energy Support">
-    <meta property="og:description" content="Regulate your glucose levels and boost metabolic energy naturally with Cardiogenix™. Available in UK, Germany and Sweden.">
+    <meta property="og:description" content="Support your healthy glucose levels and maintain metabolic energy naturally with Cardiogenix™. Available in UK, Germany and Sweden.">
     <meta property="og:image" content="images/cardiogenix.png">
     <meta property="og:url" content="https://try-cardiogenix.vercel.app/">
     <meta property="og:type" content="website">
@@ -45,7 +45,7 @@
           "@type": "Product",
           "name": "Cardiogenix™ Blood Sugar Support",
           "image": "https://try-cardiogenix.vercel.app/images/cardiogenix.png",
-          "description": "Daily supplement for men's healthy blood sugar levels and metabolic balance.",
+          "description": "Daily dietary supplement for men supporting healthy blood sugar levels and metabolic balance.",
           "brand": { "@type": "Brand", "name": "Cardiogenix" },
           "sku": "CG-EU-01",
           "aggregateRating": {
@@ -87,8 +87,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
 
-    <link rel="icon" href="images/faviconV2 (1).png" type="image/png">
-
     <style>
         body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
         .hero-section-bg { background-color: #ffffff; position: relative; overflow: hidden; }
@@ -101,11 +99,10 @@
             border: 1px solid rgba(11, 30, 61, 0.1);
         }
         
-        /* Botões dos países com bordas solicitadas */
         .btn-country {
             background: white; 
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid rgba(235, 112, 77, 0.35); /* Borda visível no mobile */
+            border: 2px solid rgba(235, 112, 77, 0.35);
         }
         .btn-country:hover {
             transform: translateY(-3px);
@@ -124,6 +121,15 @@
             opacity: 1;
             padding-bottom: 1rem;
         }
+        
+        /* Cookie Banner Styles */
+        #cookie-banner {
+            transform: translateY(100%);
+            transition: transform 0.4s ease-in-out;
+        }
+        #cookie-banner.show {
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-white text-slate-800 relative overflow-x-hidden">
@@ -132,7 +138,8 @@
     <header class="sticky top-0 bg-white/95 backdrop-blur-md z-40 shadow-sm border-b border-gray-100">
         <div class="container mx-auto flex justify-between items-center p-4">
             <div class="flex items-center gap-2">
-                <img src="images/cardiogenix-logo.png" alt="Cardiogenix Logo" class="h-8 md:h-10 w-auto">
+                <!-- Fallback na imagem para evitar quebras se o link falhar, política do Google -->
+                <img src="images/cardiogenix-logo.png" alt="Cardiogenix Logo" onerror="this.src='https://via.placeholder.com/150x40?text=Cardiogenix'" class="h-8 md:h-10 w-auto">
             </div>
             <nav>
                 <a href="#order" class="bg-brand-orange text-white px-6 py-2 rounded-full text-sm font-bold hover:brightness-110 transition-all shadow-md active:scale-95" data-translate="nav_order" aria-label="Order Cardiogenix Now">Order Now</a>
@@ -149,47 +156,48 @@
                     <!-- LADO ESQUERDO: CONTEÚDO -->
                     <div class="reveal flex flex-col items-center lg:items-start order-1">
                         
-                        <!-- Selo de Avaliação -->
+                        <!-- Selo de Avaliação - Alterado para "Customer Rating" (Policy compliance) -->
                         <div class="glass-panel rounded-full px-3 py-1.5 mb-6 flex flex-row items-center justify-center gap-2 sm:gap-3 shadow-sm max-w-max mx-auto lg:mx-0 lg:inline-flex">
                             <div class="flex items-center gap-1.5 shrink-0">
                                 <i class="text-brand-orange w-4 h-4 fill-current" data-feather="star" aria-hidden="true"></i>
-                                <span class="font-extrabold text-[10px] sm:text-xs text-brand-navy">4.9/5 Official Rating</span>
+                                <span class="font-extrabold text-[10px] sm:text-xs text-brand-navy">4.9/5 Customer Rating</span>
                             </div>
                             <div class="w-px h-3 bg-gray-300 shrink-0" aria-hidden="true"></div>
                             <span class="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-brand-orange whitespace-nowrap" data-translate="discount_badge">SPECIAL OFFER: LIMITED TIME ONLY</span>
                         </div>
 
+                        <!-- Título Suavizado para Políticas Google Ads (Evitar bloqueio por promessa médica) -->
                         <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-7xl font-black mb-6 leading-tight tracking-tight text-brand-navy text-center lg:text-left" data-translate="hero_title">
-                            Control Your Blood Sugar & Take Back Your Energy
+                            Support Healthy Blood Sugar & Maintain Daily Energy
                         </h1>
 
-                        <!-- IMAGEM MOBILE (Logo após o título) -->
+                        <!-- IMAGEM MOBILE -->
                         <div class="lg:hidden w-full flex justify-center mb-10 relative">
                             <div class="absolute -inset-8 bg-brand-orange/5 blur-[70px] rounded-full" aria-hidden="true"></div>
-                            <img src="images/cardiogenix.png" alt="Cardiogenix Supplement - Mobile View" class="relative z-10 w-full max-w-[280px] h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.12)]">
+                            <img src="images/cardiogenix.png" alt="Cardiogenix Supplement Bottle" onerror="this.src='https://via.placeholder.com/280x400?text=Product+Image'" class="relative z-10 w-full max-w-[280px] h-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.12)]">
                         </div>
                         
                         <p class="text-base md:text-xl mb-10 text-slate-700 leading-relaxed font-semibold text-center lg:text-left lg:max-w-xl" data-translate="hero_desc">
-                            Cardiogenix™ supports healthy glucose levels and metabolic balance, helping men feel stronger and more focused every day.
+                            Cardiogenix™ is a dietary supplement formulated to support healthy glucose levels and metabolic balance, helping men maintain their natural focus and strength every day.
                         </p>
 
-                        <!-- SELEÇÃO DE PAÍSES (Formatada conforme solicitado: horizontal com bordas) -->
+                        <!-- SELEÇÃO DE PAÍSES -->
                         <div class="w-full max-w-2xl bg-slate-50 p-6 rounded-3xl lg:bg-transparent lg:p-0">
                             <p class="text-[11px] font-black uppercase tracking-widest text-brand-orange mb-5 text-center lg:text-left" data-translate="select_cta"><i data-feather="map-pin" class="inline-block w-3.5 h-3.5 mb-0.5 mr-1" aria-hidden="true"></i> SELECT YOUR COUNTRY TO ORDER:</p>
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" role="navigation" aria-label="Country selection">
                                 <!-- Alemanha -->
-                                <a href="https://tl-track.com/tracker/vX24/" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm group" aria-label="Germany">
+                                <a href="https://tl-track.com/tracker/vX24/" rel="nofollow" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm group" aria-label="Germany">
                                     <img src="https://flagcdn.com/w40/de.png" class="w-6 h-auto rounded-sm" alt="Germany">
                                     <span class="font-bold text-sm text-brand-navy group-hover:text-brand-orange transition-colors">Germany</span>
                                 </a>
                                 <!-- UK -->
-                                <a href="https://tl-track.com/tracker/vX22/" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm group" aria-label="United Kingdom">
+                                <a href="https://tl-track.com/tracker/vX22/" rel="nofollow" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm group" aria-label="United Kingdom">
                                     <img src="https://flagcdn.com/w40/gb.png" class="w-6 h-auto rounded-sm" alt="United Kingdom">
                                     <span class="font-bold text-sm text-brand-navy group-hover:text-brand-orange transition-colors text-center">United Kingdom</span>
                                 </a>
                                 <!-- Suécia -->
-                                <a href="https://tl-track.com/tracker/vX2w/" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm group" aria-label="Sweden">
+                                <a href="https://tl-track.com/tracker/vX2w/" rel="nofollow" class="btn-country flex items-center justify-center gap-3 p-4 rounded-2xl shadow-sm group" aria-label="Sweden">
                                     <img src="https://flagcdn.com/w40/se.png" class="w-6 h-auto rounded-sm" alt="Sweden">
                                     <span class="font-bold text-sm text-brand-navy group-hover:text-brand-orange transition-colors">Sweden</span>
                                 </a>
@@ -201,7 +209,7 @@
                     <div class="hidden lg:flex flex-col justify-center items-center h-full order-2">
                         <div class="relative w-full max-w-[480px]">
                             <div class="absolute -inset-16 bg-brand-orange/10 blur-[120px] rounded-full" aria-hidden="true"></div>
-                            <img src="images/cardiogenix.png" alt="Cardiogenix Supplement Bottle" class="relative z-10 w-full h-auto object-contain transform transition hover:scale-105 duration-1000 drop-shadow-[0_30px_40px_rgba(0,0,0,0.15)]">
+                            <img src="images/cardiogenix.png" alt="Cardiogenix Supplement Bottle" onerror="this.src='https://via.placeholder.com/480x600?text=Product+Image'" class="relative z-10 w-full h-auto object-contain transform transition hover:scale-105 duration-1000 drop-shadow-[0_30px_40px_rgba(0,0,0,0.15)]">
                         </div>
                     </div>
 
@@ -223,7 +231,7 @@
                             <i data-feather="chevron-down" class="text-brand-orange transition-transform duration-300 shrink-0" aria-hidden="true"></i>
                         </button>
                         <div class="faq-content px-5 text-slate-600 text-[13px] md:text-sm leading-relaxed" data-translate="faq_a1">
-                            Cardiogenix™ is a daily supplement developed to help maintain healthy blood sugar levels, support metabolism, and promote more stable energy throughout the day — naturally.
+                            Cardiogenix™ is a daily dietary supplement developed to help support healthy blood sugar levels already within the normal range, assist metabolism, and promote steady energy throughout the day — naturally.
                         </div>
                     </div>
 
@@ -233,7 +241,7 @@
                             <i data-feather="chevron-down" class="text-brand-orange transition-transform duration-300 shrink-0" aria-hidden="true"></i>
                         </button>
                         <div class="faq-content px-5 text-slate-600 text-[13px] md:text-sm leading-relaxed" data-translate="faq_a2">
-                            The formula works by supporting glucose balance and metabolic response after meals, helping to avoid sharp blood sugar spikes — which typically cause fatigue, sugar cravings, and energy crashes.
+                            The formula provides nutritional support for glucose balance and metabolic function after meals. It is designed to complement a healthy diet and lifestyle, helping to maintain natural energy levels.
                         </div>
                     </div>
 
@@ -243,7 +251,7 @@
                             <i data-feather="chevron-down" class="text-brand-orange transition-transform duration-300 shrink-0" aria-hidden="true"></i>
                         </button>
                         <div class="faq-content px-5 text-slate-600 text-[13px] md:text-sm leading-relaxed" data-translate="faq_a3">
-                            Some people notice more energy and stability within the first few weeks. For full benefits, consistent daily use for at least 30 days is recommended.
+                            As with any dietary supplement, results may vary. Some individuals report noticing more energy within the first few weeks. For full supportive benefits, consistent daily use for at least 30 to 60 days is recommended.
                         </div>
                     </div>
 
@@ -253,7 +261,7 @@
                             <i data-feather="chevron-down" class="text-brand-orange transition-transform duration-300 shrink-0" aria-hidden="true"></i>
                         </button>
                         <div class="faq-content px-5 text-slate-600 text-[13px] md:text-sm leading-relaxed" data-translate="faq_a4">
-                            Yes. The product is sold as a dietary supplement and manufactured following European quality standards. ⚠️ It is not a medicine.
+                            Yes. The product is sold as a dietary supplement and manufactured following strict European quality standards. ⚠️ Important: It is not a medicine and cannot replace prescribed treatments.
                         </div>
                     </div>
 
@@ -263,7 +271,7 @@
                             <i data-feather="chevron-down" class="text-brand-orange transition-transform duration-300 shrink-0" aria-hidden="true"></i>
                         </button>
                         <div class="faq-content px-5 text-slate-600 text-[13px] md:text-sm leading-relaxed" data-translate="faq_a5">
-                            You have the right to withdraw from the purchase within the legal timeframe. Important: the bottle must be sealed for the return to be accepted.
+                            You have the right to withdraw from the purchase within the legal timeframe according to consumer protection laws. The bottle must remain sealed and unopened for the return to be accepted.
                         </div>
                     </div>
 
@@ -273,7 +281,7 @@
                             <i data-feather="chevron-down" class="text-brand-orange transition-transform duration-300 shrink-0" aria-hidden="true"></i>
                         </button>
                         <div class="faq-content px-5 text-slate-600 text-[13px] md:text-sm leading-relaxed" data-translate="faq_a6">
-                            For best results, take the recommended dose daily with a glass of water, preferably before your largest meal.
+                            For optimal dietary support, take the recommended dose daily with a full glass of water, preferably before your largest meal of the day.
                         </div>
                     </div>
                 </div>
@@ -281,15 +289,25 @@
         </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer class="bg-brand-navy text-slate-400 py-12 border-t border-white/5">
+    <!-- Rodapé Google Ads Compliant (Transparência Máxima) -->
+    <footer class="bg-brand-navy text-slate-300 py-12 border-t border-white/5">
         <div class="container mx-auto px-4 text-center text-sm">
-            <div class="flex flex-col items-center justify-center mb-8 gap-4">
-                <img src="images/cardiogenix-logo.png" alt="Logo" class="h-8 brightness-0 invert opacity-90">
-                <p class="text-[10px] text-slate-500 max-w-md mt-2 uppercase tracking-widest font-bold">Authorized Distributor Europe & UK</p>
+            
+            <!-- Logo e Identidade Corporativa Clara -->
+            <div class="flex flex-col items-center justify-center mb-6 gap-4">
+                <img src="images/cardiogenix-logo.png" onerror="this.style.display='none'" alt="Cardiogenix Logo" class="h-8 brightness-0 invert opacity-90">
+                <p class="text-[10px] text-slate-400 max-w-md mt-2 uppercase tracking-widest font-bold">Authorized Distributor Europe & UK</p>
+            </div>
+
+            <!-- Informações de Contato Visíveis (Exigência Crítica do Google Ads) -->
+            <div class="mb-8 text-xs text-slate-400 font-medium">
+                <p><strong>RICA Corporation Ltd.</strong></p>
+                <p>97 Windsor Street, Sliema, Malta</p>
+                <p>Email: <a href="mailto:info@ivitasana.com" class="hover:text-brand-orange transition-colors">info@ivitasana.com</a></p>
             </div>
             
-            <div class="flex justify-center flex-wrap gap-6 md:gap-10 mb-8 text-[10px] font-extrabold uppercase tracking-widest">
+            <!-- Links Legais -->
+            <div class="flex justify-center flex-wrap gap-6 md:gap-10 mb-8 text-[10px] font-extrabold uppercase tracking-widest text-slate-400">
                 <button onclick="openModal('privacy')" class="hover:text-brand-orange transition-colors" data-translate="link_privacy">Privacy Policy</button>
                 <button onclick="openModal('terms')" class="hover:text-brand-orange transition-colors" data-translate="link_terms">Terms of Service</button>
                 <button onclick="openModal('refund')" class="hover:text-brand-orange transition-colors" data-translate="link_refund">Refund Policy</button>
@@ -297,12 +315,26 @@
                 <button onclick="openModal('impressum')" class="hover:text-brand-orange transition-colors">Impressum</button>
             </div>
 
-            <div class="border-t border-white/5 pt-8 text-[10px] text-slate-600 max-w-4xl mx-auto space-y-4 leading-relaxed">
-                <p>Cardiogenix™ is a premium dietary supplement. It is not intended to diagnose, treat, or prevent any disease. Results vary by individual metabolism. Consult a doctor if you are on diabetic medication.</p>
+            <!-- Aviso Médico Obrigatório (Alta Visibilidade) -->
+            <div class="border-t border-white/10 pt-8 text-[11px] text-slate-400 max-w-4xl mx-auto space-y-4 leading-relaxed font-medium">
+                <p class="border border-white/10 p-4 rounded-lg bg-white/5">
+                    <strong>FDA / EFSA Disclaimer:</strong> The statements made on this website have not been evaluated by the Food and Drug Administration or the European Food Safety Authority. Cardiogenix™ is a premium dietary supplement. It is not intended to diagnose, treat, cure, or prevent any disease. Results vary by individual metabolism. Consult a licensed healthcare professional before use, especially if you are on diabetic medication, pregnant, nursing, or have a medical condition.
+                </p>
                 <p>© 2026 RICA Corporation Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Banner de Consentimento de Cookies (Políticas do Google para a UE - Consent Mode) -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-brand-navy border-t border-brand-orange/30 text-white z-50 p-4 md:p-6 shadow-2xl flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-xs md:text-sm text-slate-300 max-w-4xl">
+            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies according to European regulations.
+            <button onclick="openModal('privacy')" class="underline hover:text-brand-orange ml-1">Read our Privacy Policy.</button>
+        </div>
+        <div class="flex gap-3 shrink-0">
+            <button onclick="acceptCookies()" class="bg-brand-orange text-white px-6 py-2 rounded-lg text-sm font-bold hover:brightness-110 transition-all">Accept All</button>
+        </div>
+    </div>
 
     <!-- MODAL -->
     <div id="policy-modal" class="fixed inset-0 z-50 hidden" aria-modal="true" role="dialog">
@@ -327,69 +359,69 @@
     <script>
         const translations = {
             'en': {
-                'meta_title': 'Cardiogenix™ | Control Your Blood Sugar & Daily Energy',
+                'meta_title': 'Cardiogenix™ | Support Your Blood Sugar & Daily Energy',
                 'nav_order': 'Order Now',
                 'discount_badge': 'SPECIAL OFFER: LIMITED TIME ONLY',
-                'hero_title': 'Control Your Blood Sugar & Take Back Your Energy',
-                'hero_desc': 'Cardiogenix™ supports healthy glucose levels and metabolic balance, helping men feel stronger and more focused every day.',
+                'hero_title': 'Support Healthy Blood Sugar & Maintain Daily Energy',
+                'hero_desc': 'Cardiogenix™ is a dietary supplement formulated to support healthy glucose levels and metabolic balance, helping men maintain their natural focus and strength every day.',
                 'select_cta': 'SELECT YOUR COUNTRY:',
                 'faq_title': 'Frequently Asked Questions',
                 'faq_q1': 'What exactly is Cardiogenix™?',
-                'faq_a1': 'Cardiogenix™ is a daily supplement developed to help maintain healthy blood sugar levels, support metabolism, and promote more stable energy throughout the day — naturally. It was created for adults who want more control over their metabolic health.',
+                'faq_a1': 'Cardiogenix™ is a daily dietary supplement developed to help support healthy blood sugar levels already within the normal range, assist metabolism, and promote steady energy throughout the day — naturally.',
                 'faq_q2': 'How does Cardiogenix™ work in the body?',
-                'faq_a2': 'The formula works by supporting glucose balance and metabolic response after meals, helping to avoid sharp blood sugar spikes — which typically cause fatigue, sugar cravings, and energy crashes.',
+                'faq_a2': 'The formula provides nutritional support for glucose balance and metabolic function after meals. It is designed to complement a healthy diet and lifestyle.',
                 'faq_q3': 'How soon can I see results?',
-                'faq_a3': 'Some people notice more energy and stability within the first few weeks. For full benefits, consistent daily use for at least 30 days is recommended.',
+                'faq_a3': 'As with any dietary supplement, results may vary. For full supportive benefits, consistent daily use for at least 30 to 60 days is recommended.',
                 'faq_q4': 'Is Cardiogenix™ safe?',
-                'faq_a4': 'Yes. The product is sold as a dietary supplement and manufactured following European quality standards. ⚠️ It is not a medicine.',
+                'faq_a4': 'Yes. The product is sold as a dietary supplement and manufactured following strict European quality standards. ⚠️ Important: It is not a medicine.',
                 'faq_q5': 'What if I change my mind after purchase?',
-                'faq_a5': 'You have the right to withdraw from the purchase within the legal timeframe. Important: the bottle must be sealed for the return to be accepted.',
+                'faq_a5': 'You have the right to withdraw from the purchase within the legal timeframe. The bottle must remain sealed and unopened for the return to be accepted.',
                 'faq_q6': 'How should I take Cardiogenix™?',
-                'faq_a6': 'For best results, take the recommended dose daily with a glass of water, preferably before your largest meal.',
+                'faq_a6': 'For optimal dietary support, take the recommended dose daily with a full glass of water, preferably before your largest meal.',
                 'link_privacy': 'Privacy Policy', 'link_terms': 'Terms of Service', 'link_refund': 'Refund Policy', 'link_delivery': 'Delivery Policy'
             },
             'de': {
                 'meta_title': 'Cardiogenix™ | Blutzucker unterstützen & Tägliche Energie',
                 'nav_order': 'Jetzt Bestellen',
                 'discount_badge': 'SONDERANGEBOT: NUR FÜR KURZE ZEIT',
-                'hero_title': 'Blutzucker unterstützen & Stoffwechsel stärken',
-                'hero_desc': 'Cardiogenix™ unterstützt gesunde Glukosewerte und das metabolische Gleichgewicht, damit Männer sich jeden Tag stärker und fokussierter fühlen.',
+                'hero_title': 'Gesunden Blutzucker unterstützen & Stoffwechsel pflegen',
+                'hero_desc': 'Cardiogenix™ ist ein Nahrungsergänzungsmittel zur Unterstützung gesunder Glukosewerte und des metabolischen Gleichgewichts.',
                 'select_cta': 'WÄHLEN SIE IHR LAND:',
                 'faq_title': 'Häufig gestellte Fragen',
                 'faq_q1': 'Was genau ist Cardiogenix™?',
-                'faq_a1': 'Cardiogenix™ ist ein tägliches Nahrungsergänzungsmittel, das entwickelt wurde, um einen gesunden Blutzuckerspiegel zu unterstützen e den Stoffwechsel zu fördern.',
+                'faq_a1': 'Cardiogenix™ ist ein tägliches Nahrungsergänzungsmittel zur ernährungsphysiologischen Unterstützung eines normalen Blutzuckerspiegels.',
                 'faq_q2': 'Wie wirkt Cardiogenix™?',
-                'faq_a2': 'Die Formel unterstützt das Glukosegleichgewicht nach den Mahlzeiten, um starke Blutzuckerspitzen zu vermeiden.',
+                'faq_a2': 'Die Formel unterstützt ernährungsphysiologisch das Glukosegleichgewicht nach den Mahlzeiten. Es ergänzt eine gesunde Lebensweise.',
                 'faq_q3': 'Wie schnell sehe ich Ergebnisse?',
-                'faq_a3': 'Einige bemerken bereits in den ersten Wochen mehr Energie. Für die volle Wirkung wird eine Anwendung über mindestens 30 Tage empfohlen.',
+                'faq_a3': 'Ergebnisse können variieren. Für die volle Unterstützung wird eine kontinuierliche Anwendung über 30 bis 60 Tage empfohlen.',
                 'faq_q4': 'Ist es sicher?',
-                'faq_a4': 'Ja. Das Produkt wird nach europäischen Qualitätsstandards hergestellt. Es ist kein Medikament.',
+                'faq_a4': 'Ja. Hergestellt nach europäischen Qualitätsstandards. ⚠️ Wichtig: Es ist kein Medikament.',
                 'faq_q5': 'Rückgaberecht?',
-                'faq_a5': 'Sie haben ein gesetzliches Widerrufsrecht. Die Flasche muss versiegelt sein, damit die Rücksendung akzeptiert wird.',
+                'faq_a5': 'Sie haben ein gesetzliches Widerrufsrecht. Die Flasche muss versiegelt und ungeöffnet sein, damit die Rücksendung akzeptiert wird.',
                 'faq_q6': 'Einnahme?',
-                'faq_a6': 'Täglich eine Dosis mit Wasser einnehmen, idealerweise vor der größten Mahlzeit.',
+                'faq_a6': 'Täglich eine Dosis mit ausreichend Wasser einnehmen, idealerweise vor der größten Mahlzeit.',
                 'link_privacy': 'Datenschutz', 'link_terms': 'AGB', 'link_refund': 'Widerruf', 'link_delivery': 'Lieferung'
             },
             'sv': {
                 'meta_title': 'Cardiogenix™ | Stöd Hälsosamt Blodsocker & Metabolism',
                 'nav_order': 'Beställ Nu',
-                'discount_badge': 'SPECIALERBJUDANDE: ENDAST UNDER BEGRÄNSAD TID',
-                'hero_title': 'Stöd Hälsosamt Blodsocker & Stärk Din Metabolism',
-                'hero_desc': 'Cardiogenix™ är en daglig formula designad för att stabilisera glukosnivåer och främja uthållig energi för män.',
+                'discount_badge': 'SPECIALERBJUDANDE: BEGRÄNSAD TID',
+                'hero_title': 'Stöd Hälsosamt Blodsocker & Upprätthåll Daglig Energi',
+                'hero_desc': 'Cardiogenix™ är ett kosttillskott formulerat för att ge näringsmässigt stöd för normala glukosnivåer och metabolisk balans.',
                 'select_cta': 'VÄLJ DITT LAND:',
                 'faq_title': 'Vanliga frågor',
                 'faq_q1': 'Vad exakt är Cardiogenix™?',
-                'faq_a1': 'Cardiogenix™ är ett dagligt kosttillskott utvecklat för att hjälpa till att bibehålla hälsosamma blodsocker-nivåer och stödja metabolismen.',
+                'faq_a1': 'Cardiogenix™ är ett dagligt kosttillskott utvecklat för att stödja hälsosamma blodsockernivåer som redan är inom det normala intervallet.',
                 'faq_q2': 'Hur fungerar det i kroppen?',
-                'faq_a2': 'Formulan fungerar genom att stödja glukosbalansen efter måltider, vilket hjälper till att undvika kraftiga blodsocker-toppar.',
+                'faq_a2': 'Formulan ger näringsmässigt stöd för glukosbalans. Det är designat för att komplettera en hälsosam kost.',
                 'faq_q3': 'När ser jag resultat?',
-                'faq_a3': 'Vissa märker mer energi redan under de första veckorna. För fullständiga fördelar rekommenderas konsekvent användning i minst 30 dagar.',
+                'faq_a3': 'Resultaten kan variera. För fullständigt stöd rekommenderas konsekvent daglig användning i minst 30 till 60 dagar.',
                 'faq_q4': 'Är det säkert?',
-                'faq_a4': 'Ja. Produkten tillverkas enligt europeiska kvalitetsstandarder. Det é inte ett läkemedel.',
+                'faq_a4': 'Ja. Tillverkas enligt strikta europeiska kvalitetsstandarder. ⚠️ Det är inte ett läkemedel.',
                 'faq_q5': 'Ångerrätt?',
-                'faq_a5': 'Du har lagstadgad ångerrätt. Flaskan måste vara förseglad för att returen ska accepteras.',
+                'faq_a5': 'Du har lagstadgad ångerrätt. Flaskan måste förbli förseglad och oöppnad för att returen ska godkännas.',
                 'faq_q6': 'Hur ska jag ta det?',
-                'faq_a6': 'Ta den rekommenderade dosen dagligen med ett glas vatten, helst före din största måltid.',
+                'faq_a6': 'Ta den rekommenderade dosen dagligen med ett helt glas vatten, helst före din största måltid.',
                 'link_privacy': 'Integritetspolicy', 'link_terms': 'Användarvillkor', 'link_refund': 'Återbetalningspolicy', 'link_delivery': 'Leveranspolicy'
             }
         };
@@ -397,25 +429,31 @@
         const legalTexts = {
             privacy: `
                 <h2 class="text-xl font-bold mb-4">Privacy Policy</h2>
-                <p class="mb-4">CardioGenix (RICA Corporation Ltd) operates under the strictest discretion regarding your personal information.</p>
-                <p class="mb-4"><strong>Data Collection:</strong> We collect info necessary to process orders. We do not sell your information.</p>
-                <p class="mb-4"><strong>Security:</strong> All transactions are protected by SSL encryption.</p>
+                <p class="mb-4">CardioGenix (RICA Corporation Ltd) operates under the strictest discretion regarding your personal information, in full compliance with GDPR regulations.</p>
+                <p class="mb-4"><strong>Data Collection:</strong> We collect info necessary to process orders and improve our website experience. We do not sell your personal information to third parties.</p>
+                <p class="mb-4"><strong>Security:</strong> All transactions are protected by SSL encryption and industry-standard security measures.</p>
             `,
             terms: `
                 <h2 class="text-xl font-bold mb-4">Terms and Conditions</h2>
-                <p class="mb-4">Website owner: RICA Corporation Ltd. Address: 97 Windsor Street, Sliema, Malta. All contracts are governed by Dutch law.</p>
+                <p class="mb-4">Website owner: RICA Corporation Ltd. Address: 97 Windsor Street, Sliema, Malta. Email: info@ivitasana.com</p>
+                <p class="mb-4">By using this site, you agree to these terms. All products are dietary supplements and not intended to replace medical advice or treatments. All contracts are governed by local and EU consumer protection laws.</p>
             `,
             refund: `
                 <h2 class="text-xl font-bold mb-4">Refund Policy</h2>
-                <p class="mb-4">14-day withdrawal right applies. Products must be returned sealed and unopened.</p>
+                <p class="mb-4">We comply fully with EU consumer rights. A 14-day withdrawal right applies from the day you receive the product.</p>
+                <p class="mb-4"><strong>Condition of Return:</strong> For hygiene and safety reasons, products must be returned 100% sealed and unopened. Once the safety seal is broken, the product cannot be returned.</p>
             `,
             delivery: `
                 <h2 class="text-xl font-bold mb-4">Delivery Policy</h2>
-                <p class="mb-4">Standard delivery within 3-5 business days across the EU via PostNL or local carriers.</p>
+                <p class="mb-4">Standard delivery within 3-5 business days across the EU and UK via reliable local carriers.</p>
+                <p class="mb-4">You will receive a tracking number once your order has been dispatched.</p>
             `,
             impressum: `
-                <h2 class="text-xl font-bold mb-4">Impressum</h2>
-                <p class="mb-4">RICA Corporation Ltd | Malta | info@ivitasana.com</p>
+                <h2 class="text-xl font-bold mb-4">Impressum (Legal Notice)</h2>
+                <p class="mb-2"><strong>Company:</strong> RICA Corporation Ltd</p>
+                <p class="mb-2"><strong>Address:</strong> 97 Windsor Street, Sliema, Malta</p>
+                <p class="mb-2"><strong>Contact Email:</strong> info@ivitasana.com</p>
+                <p class="mb-4"><strong>Representation:</strong> Authorized Distributor Europe & UK</p>
             `
         };
 
@@ -431,6 +469,20 @@
             document.documentElement.lang = lang;
         }
 
+        // Cookie Banner Logic
+        function checkCookieConsent() {
+            if (!localStorage.getItem('cookieConsent')) {
+                setTimeout(() => {
+                    document.getElementById('cookie-banner').classList.add('show');
+                }, 1000);
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'true');
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const browserLang = navigator.language.split('-')[0].toLowerCase();
             const urlParams = new URLSearchParams(window.location.search);
@@ -440,6 +492,7 @@
             feather.replace();
             reveal();
             setupAccordion();
+            checkCookieConsent();
         });
 
         function setupAccordion() {
